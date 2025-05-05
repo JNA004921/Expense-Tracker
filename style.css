@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+  }
+  
+  input, select, button {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  #expenseList li {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fff;
+    border-left: 4px solid #00aaff;
+  }
+  
+  .summary {
+    margin-top: 20px;
+  }
+  
+  .positive {
+    color: green;
+  }
+  
+  .negative {
+    color: red;
+  }
+  
+  /* Dark mode */
+  body.dark {
+    background-color: #222;
+    color: #eee;
+  }
+  
+  body.dark input,
+  body.dark select,
+  body.dark button {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #444;
+  }
+  
+  body.dark #expenseList li {
+    background-color: #333;
+    border-left-color: #ffaa00;
+  }
+
+h1 {
+    color: #00aaff;
+  }
+  
+  h2 {
+    color: #ffaa00;
+  }
+  
+  .dark h1 {
+    color: #ffaa00;
+  }
+  
+  .dark h2 {
+    color: #00aaff;
+  }

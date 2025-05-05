@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Authentication Section -->
+  <div id="authSection">
+    <h2>Login or Register</h2>
+    <input type="text" id="usernameInput" placeholder="Enter username" />
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <!-- App Section (only visible when logged in) -->
+  <div id="appSection" style="display: none;">
+    <h1>Expense Tracker 💸</h1>
+    <h3>Welcome, <span id="currentUserName"></span>!</h3>
+    <button onclick="logout()">Logout</button>
+    <button id="themeToggle">🌙 Dark Mode</button>
+
+    <!-- Inputs -->
+    <input type="text" id="descInput" placeholder="Description" />
+    <input type="number" id="amountInput" placeholder="Amount" />
+
+    <!-- Category Selection -->
+    <select id="categoryInput">
+      <option value="Food">Food</option>
+      <option value="Transport">Transport</option>
+      <option value="Utilities">Utilities</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Health">Health</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <button onclick="addExpense()">Add Expense</button>
+    <button onclick="clearAllExpenses()">Clear All</button>
+    <button onclick="exportToCSV()">📄 Download CSV</button>
+
+    <!-- Filters -->
+    <input type="text" id="searchInput" placeholder="Search..." oninput="filterExpenses()" />
+    <input type="date" id="dateInput" onchange="filterByDate()" />
+
+    <!-- Expense List -->
+    <ul id="expenseList"></ul>
+
+    <!-- Summary -->
+    <div class="summary">
+      <h2>Total: ₹<span id="total" class="positive">0.00</span></h2>
+    </div>
+
+    <!-- Monthly Summary -->
+    <div class="summary" id="monthlySummary">
+      <h2>📅 Monthly Summary</h2>
+      <ul id="monthlyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
